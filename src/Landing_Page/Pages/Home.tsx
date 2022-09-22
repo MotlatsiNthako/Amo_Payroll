@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import StepOne from "../Cards/StepOne";
+import StepOne, { CardProps } from "../Cards/StepOne";
 import {
   Box,
   Text,
@@ -14,10 +14,23 @@ import {
 } from "@chakra-ui/react";
 import { GiTimeBomb } from "react-icons/gi";
 import { FaRocket, FaTools, FaPercentage } from "react-icons/fa";
-import StepThree from "../Cards/StepThree";
-import StepTwo from "../Cards/StepTwo";
+
 
 function Home() {
+  const steps: CardProps[] = [
+    {
+      heading: "Step 1",
+      body: "Company registers with Amo",
+    },
+    {
+      heading: "Step 2",
+      body: "Employees get access to Amo’s platform",
+    },
+    {
+      heading: "Step 3",
+      body: "Employees request salary advance anytime during the month",
+    },
+  ];
   return (
     <Box bg="#C4EEDF">
       <NavBar />
@@ -136,12 +149,11 @@ function Home() {
           How it works
         </Heading>
 
-       
         <VStack mt="300" spacing={"50px"} alignItems={"center"}>
           <Flex>
-            <StepOne />
-            <StepTwo />
-            <StepThree />
+            {steps.map((step, i) => (
+              <StepOne heading={step.heading} body={step.body} />
+            ))}
           </Flex>
         </VStack>
       </Box>

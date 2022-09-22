@@ -1,12 +1,16 @@
 import { Box, Heading, Text, Stack, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
+import React, { FC } from "react";
 
-export default function StepOne() {
+export interface CardProps {
+  heading: string;
+  body: string;
+}
+const StepOne: FC<CardProps> = ({ heading, body }) => {
   return (
     <Box py={6} ml={35}>
       <Box
         maxW={"300px"}
-        w={"full"}
+        w={"400px"}
         h={"200px"}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
@@ -21,13 +25,15 @@ export default function StepOne() {
             fontFamily={"body"}
             textAlign={"center"}
           >
-            Step 1
+            {heading}
           </Heading>
           <Text color={"#000000"} textAlign={"center"}>
-            Company registers with Amo
+            {body}
           </Text>
         </Stack>
       </Box>
     </Box>
   );
-}
+};
+
+export default StepOne;
