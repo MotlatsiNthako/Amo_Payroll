@@ -14,7 +14,8 @@ app.use(express.json())
 const loginRouter = require('./routes/login')
 app.use('/login', loginRouter)
 
-
+const CompanyRouter = require('./routes/company')
+app.use('/company',CompanyRouter)
 
 
 app.listen(3000, () => console.log('Server Started'))
