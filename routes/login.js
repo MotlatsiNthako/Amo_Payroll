@@ -16,7 +16,25 @@ router.get('/', async (req, res) => {
 router.get('/:id', getUser, (req, res) => {
      res.json(res.user)  
 })
+//Creating One
+router.post('/', (req, res) => {
+   const user = new User({
+      FirstName: req.body.FirstName,
+      LastName: req.body.LastName,
+      Email: req.body.Email,
+      PhoneNumber: req.body.PhoneNumber,
+      Password: req.body.Password,
+      Roles: req.body.Password
+   })
+   try {
+       const newUser =  user.save()
+       res.status(201).json(newUser)
+   }
+   catch(err){
+        res.status(400).json({message: err.message})
+   }
 
+})
 
 async function getUser(req, res, next){
     let user
