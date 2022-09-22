@@ -1,23 +1,19 @@
 import * as React from "react";
 import { ChakraProvider, theme } from "@chakra-ui/react";
 import Home from "./Landing_Page/Pages/Home";
-import SignIn from "./SignIn_Page/SignIn";
+import SignIn from "./Landing_Page/Pages/SignIn/SignIn";
 import { Route, Routes } from "react-router-dom";
 import Products from "./Landing_Page/Pages/Products/Products";
-import Registration from "./Registeration_Page/Registration";
-import AdminDashboard from "./Company_Admin/AdminDashboard";
-import CompanyHome from "./Company_Admin/CompanyHome";
-import Approvals from "./Company_Admin/Approvals";
-
-import Reports from "./Company_Admin/Reports";
-import Employees from "./Company_Admin/Employees";
+import Registration from "./Landing_Page/Pages/Registration/Registration";
+import AdminDashboard from "./Landing_Page/Pages/CompanyAdmin/AdminDashboard";
+import CompanyHome from "./Landing_Page/Pages/CompanyAdmin/CompanyHome";
+import Approvals from "./Landing_Page/Pages/CompanyAdmin/Approvals";
+import Advances from "./Landing_Page/Pages/CompanyAdmin/Advances";
+import Reports from "./Landing_Page/Pages/CompanyAdmin/Reports";
+import Employees from "./Landing_Page/Pages/CompanyAdmin/Employees";
 import Pricing from "./Landing_Page/Pages/Pricing";
-import { SystemAdminMenu } from "./System_Admin/SystemAdminMenu";
-import SystemAdminDashboard from "./System_Admin/SystemAdminDashboard";
-import SystemAdminHome from "./System_Admin/SystemAdminHome";
-import Companies from "./System_Admin/Companies";
-import Advances from "./Company_Admin/Advances";
-import EmployeeHome from "./Employee/EmployeeHome";
+import { SystemAdminMenu } from "./Landing_Page/Pages/SystemAdmin/SystemAdminMenu";
+import SystemAdminDashboard from "./Landing_Page/Pages/SystemAdmin/SystemAdminDashboard";
 
 
 

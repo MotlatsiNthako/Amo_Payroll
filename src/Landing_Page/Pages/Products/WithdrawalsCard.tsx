@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
-export default function StepOne() {
+export default function WithdrawalsCard() {
   return (
     <Box py={6} ml={35}>
       <Box
@@ -9,7 +9,6 @@ export default function StepOne() {
         w={"full"}
         h={"200px"}
         bg={useColorModeValue("white", "gray.900")}
-        boxShadow={"2xl"}
         rounded={"md"}
         p={6}
         overflow={"hidden"}
@@ -21,10 +20,10 @@ export default function StepOne() {
             fontFamily={"body"}
             textAlign={"center"}
           >
-            Step 1
+            Anytime Withdrawals
           </Heading>
           <Text color={"#000000"} textAlign={"center"}>
-            Company registers with Amo
+          Anytime Withdrawals. We allow you to withdraw the amount you have worked for at any point in time
           </Text>
         </Stack>
       </Box>
