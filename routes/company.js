@@ -17,6 +17,25 @@ router.get('/:id', getCompany, (req, res) => {
     res.json(res.company)  
 })
 
+router.post('/', (req, res) => {
+   const company = new Company({
+      CompanyName: req.body.CompanyName,
+      CompanyIndustry: req.body.CompanyIndustry,
+      CompanyLocation: req.body.CompanyLocation,
+      CompanyLogo: req.body.CompanyLogo,
+      PayrollDate: req.body.PayrollDate,
+      CompanyContract: req.body.CompanyContract
+   })
+   try {
+       const newCompany =  company.save()
+       res.status(201).json(newCompany)
+   }
+   catch(err){
+        res.status(400).json({message: err.message})
+   }
+
+})
+
 
 async function getCompany(req, res, next){
     let company
