@@ -22,9 +22,9 @@ router.post('/', (req, res) => {
       CompanyName: req.body.CompanyName,
       CompanyIndustry: req.body.CompanyIndustry,
       CompanyLocation: req.body.CompanyLocation,
-      CompanyLogo: req.body.CompanyLogo,
       PayrollDate: req.body.PayrollDate,
-      CompanyContract: req.body.CompanyContract
+      BaseCountry: req.body.BaseCountry,
+      PhoneNumber: req.body.PhoneNumber
    })
    try {
        const newCompany =  company.save()

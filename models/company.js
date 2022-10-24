@@ -14,17 +14,21 @@ const  companySchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  CompanyLogo: {
-      type: String
-  },
   PayrollDate: {
     type: Date,
     required: true
   },
-  CompanyContract: {
+  BaseCountry: {
     type: String,
+    required: true
+  },
+  PhoneNumber: {
+    type: Number,
     required: true
   },
 });
 
-module.exports = mongoose.model('Company', companySchema)
+const Company = mongoose.model('Company', companySchema)
+
+module.exports = Company;
+

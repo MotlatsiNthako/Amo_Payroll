@@ -17,5 +17,17 @@ app.use('/login', loginRouter)
 const CompanyRouter = require('./routes/company')
 app.use('/company',CompanyRouter)
 
+const EmployeeRouter = require("./routes/employee")
+app.use('/employee',EmployeeRouter)
+
+
+const workingDetailsRouter = require("./routes/workingDetails")
+app.use('/workingdetails',workingDetailsRouter)
+
+const SalaryPaymentRouter = require("./routes/salaryPayment")
+app.use('/salarypayment',SalaryPaymentRouter)
+
+const EarlyWithdrawalsRouter = require("./routes/earlyWithdrawals")
+app.use('/earlywithdrawals', EarlyWithdrawalsRouter)
 
 app.listen(3000, () => console.log('Server Started'))
